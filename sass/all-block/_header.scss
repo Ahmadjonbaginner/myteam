@@ -1,0 +1,190 @@
+header {
+    background-color: #014E56;
+    position: relative;
+}
+
+nav {
+    padding-top: 73px;
+}
+
+.navbar {
+    display: flex;
+    column-gap: 80px;
+    align-items: center;
+    justify-content: space-between;
+    @include for-table-only {
+        column-gap: 48px;
+    }
+    @include for-mobile-only {}
+    &__menus {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include for-mobile-only {
+            flex-direction: column;
+            padding: 112px 42px 0 42px;
+            max-width: 255px;
+            height: 100vh;
+            justify-content: start;
+            row-gap: 36px;
+            align-items: flex-start;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #2C6269;
+            transition: 0.4s;
+            transform: translateX(100%);
+            z-index: 10;
+        }
+    }
+    &__menu {
+        display: flex;
+        column-gap: 40px;
+        @include for-mobile-only {
+            flex-direction: column;
+            row-gap: 36px;
+        }
+        &__item:nth-child(3) {
+            display: none;
+            @include for-mobile-only {
+                display: block;
+                position: absolute;
+                top: 56px;
+                right: 25px;
+            }
+        }
+        &__item {
+            &__link {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 28px;
+                color: $main-color;
+            }
+            &__link:hover {
+                font-size: 19px;
+                border-bottom: 3px solid $title-color;
+            }
+        }
+    }
+    &__btn {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        color: $main-color;
+        padding: 10px 32px;
+        background: none;
+        border: 2px solid $main-color;
+        border-radius: 24px;
+        transition: 0.3s;
+    }
+    &__btn:hover {
+        border: 2px solid $title-color;
+        color: $title-color;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    &__hamburger__bar {
+        display: none;
+        @include for-mobile-only {
+            display: block;
+        }
+    }
+    &__img {
+        display: none;
+        @include for-mobile-only {
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+.menuCheck[type='checkbox'] {
+    display: none;
+}
+
+.menuCheck:checked~.navbar__menus {
+    transform: translateX(0);
+}
+
+.hero {
+    display: flex;
+    padding: 129px 0 250px 0;
+    justify-content: space-between;
+    position: relative;
+    @include for-table-only {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        row-gap: 24px;
+        padding: 123px 0 230px 0;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 100px;
+        line-height: 100px;
+        color: #FFFFFF;
+        @include for-table-only {
+            font-size: 64px;
+            line-height: 56px;
+        }
+        @include for-mobile-only {
+            font-size: 40px;
+            line-height: 40px;
+        }
+        span {
+            color: $title-color;
+        }
+    }
+    &__texts {
+        max-width: 445px;
+        min-height: 195px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__line {
+        width: 50px;
+        height: 4px;
+        background: #79C8C7;
+        border: #79C8C7;
+        @include for-table-only {
+            display: none;
+        }
+    }
+    &__text {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        color: $main-color;
+        @include for-table-only {
+            font-size: 15px;
+        }
+    }
+    &__logo1 {
+        position: absolute;
+        top: 250px;
+        left: 0px;
+        @include for-table-only {
+            display: none;
+        }
+    }
+    &__logo2 {
+        position: absolute;
+        bottom: 0;
+        right: 0px;
+        @include for-table-only {
+            display: none;
+        }
+    }
+    &__logo3 {
+        display: none;
+        @include for-table-only {
+            display: block;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}

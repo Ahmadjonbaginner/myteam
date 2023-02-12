@@ -1,0 +1,57 @@
+.forms {
+    position: relative;
+    background-color: $title-color;
+    &__img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    padding: 76px 95px;
+    justify-content: space-between;
+    @include for-table-only {
+        padding: 84px 67px;
+    }
+    @include for-mobile-only {
+        padding: 83px 0;
+        flex-direction: column;
+        text-align: center;
+        row-gap: 24px;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 48px;
+        color: #012F34;
+        @include for-table-only {
+            &__title {
+                font-size: 32px;
+                line-height: 32px;
+            }
+        }
+    }
+    &__title:hover {
+        color: $about-color;
+    }
+    &__btn {
+        padding: 10px 32px;
+        background: none;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        color: #012F34;
+        border: 2px solid #012F34;
+        border-radius: 24px;
+        transition: 0.3s;
+    }
+    &__btn:hover {
+        color: $about-color;
+        border: 2px solid $about-color;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}

@@ -1,0 +1,23 @@
+@import './mixin';
+@import './fonts';
+@import './veriables';
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+body {
+    font-family: $font-main;
+    overflow-x: hidden;
+}
+
+@import './all-block/all-block';

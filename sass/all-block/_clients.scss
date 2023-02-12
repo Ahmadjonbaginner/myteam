@@ -1,0 +1,78 @@
+.clients {
+    background-color: #004047;
+    padding: 140px 0 150px 0;
+    position: relative;
+    @include for-table-only {
+        padding: 100px 97px;
+    }
+    @include for-mobile-only {
+        padding: 140px 0 164px 0;
+    }
+    &__title {
+        max-width: 932px;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 48px;
+        text-align: center;
+        color: $main-color;
+        margin: 0 auto;
+        span {
+            color: $about-color;
+        }
+        @include for-table-only {
+            font-size: 32px;
+            line-height: 32px;
+        }
+    }
+    &__logo1 {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    &__logo2 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.client {
+    padding-top: 92px;
+    display: flex;
+    justify-content: space-between;
+    @include for-table-only {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 84px;
+    }
+    &__card {
+        max-width: 350px;
+        text-align: center;
+        @include for-table-only {
+            max-width: 573px;
+        }
+        &__text {
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 25px;
+            color: $main-color;
+        }
+    }
+    &__names {
+        font-size: 13px;
+        line-height: 18px;
+        color: $main-color;
+        span {
+            display: block;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 28px;
+            color: $about-color;
+            margin: 24px 0 2px 0;
+        }
+    }
+    &__img {
+        margin-top: 32px;
+        width: 62px;
+    }
+}
